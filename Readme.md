@@ -1,3 +1,5 @@
+# For backend
+
 # npm init -y
 
 # npm i express
@@ -7,3 +9,12 @@
 # npm i dotenv
 
 #  npm i mongoose
+
+
+
+
+# For frontend
+
+# npm create vite@latest
+
+# npm i react-router-dom
