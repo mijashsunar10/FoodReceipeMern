@@ -2,6 +2,7 @@ import React from 'react'
 import foodreceipe from '../assets/images/image.png'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Receipitems from '../components/Receipitems'
 
 
 const Home = () => {
@@ -31,6 +32,11 @@ const Home = () => {
     </div>
 
     {/* <Footer/> no need to includeheader and footer at everytime at everpage now just use the mainnavigation in App.jsx*/}
+
+
+    <div className='receipe'>
+      <Receipitems/>  
+    </div>
     </>
   )
 }

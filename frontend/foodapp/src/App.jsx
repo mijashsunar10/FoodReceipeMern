@@ -6,10 +6,24 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home'
 import MainNavigation from './components/MainNavigation'
 
+import axios from 'axios'
+
+
+// fetch data from the database
+
+const getAllReceipe = async()=>{
+  let allReceipes = []
+  await axios.get('http://localhost:5000/receipe/').then(res=>{
+    allReceipes=res.data
+  })
+  return allReceipes
+}
+
+
 const router = createBrowserRouter([
   {path:"/",element:<MainNavigation/>,children:[
 
-     {path:'/', element:<Home/>},
+     {path:'/', element:<Home/>,loader:getAllReceipe},
   ]}
 
  
