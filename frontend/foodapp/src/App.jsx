@@ -11,9 +11,16 @@ import axios from 'axios'
 
 // fetch data from the database
 
-const getAllReceipe = async()=>{
+const getAllReceipe = async()=>{  //You’re creating an asynchronous arrow function named getAllReceipe.
   let allReceipes = []
-  await axios.get('http://localhost:5000/receipe/').then(res=>{
+  //Initializes a variable named allReceipes as an empty array.
+// You’ll later store the fetched data (list of recipes) in this variable.
+
+  await axios.get('http://localhost:5000/receipe/').then(res=>{ 
+    //This line sends an HTTP GET request to your backend API at
+// 👉 http://localhost:3000/receipe
+
+// axios.get() returns a Promise that resolves with a response object when the data arrives.
     allReceipes=res.data
   })
   return allReceipes
